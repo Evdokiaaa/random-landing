@@ -1,0 +1,33 @@
+.running__line {
+  background: var(--marquee-bg);
+  color: var(--white);
+  padding: 18px 0;
+  overflow: hidden;
+  &-container {
+    max-width: 2335px;
+    margin: 0 auto;
+    display: flex;
+    span {
+      position: relative;
+      margin-right: 30px;
+
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.1;
+      text-transform: uppercase;
+      white-space: nowrap;
+      font-family: var(--heading-font);
+      &::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: var(--white);
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -18px;
+      }
+    }
+  }
+}

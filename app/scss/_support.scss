@@ -1,0 +1,115 @@
+.support {
+  &__wrapper {
+    display: grid;
+    gap: 64px;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    min-height: 250px;
+    justify-content: space-between;
+    &-top-image {
+      //Возможно через relative делать
+      margin-left: 64px;
+    }
+
+    &-top-title {
+      max-width: 764px;
+      p {
+        color: var(--heading-color);
+        display: inline;
+        font-family: var(--heading-font);
+        font-weight: 700;
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.4;
+      }
+      span {
+        font-weight: 700;
+        color: var(--secondary-color);
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+  &__main {
+    position: relative;
+    &-image-wrapper {
+      position: absolute;
+      top: -46px;
+      left: -28px;
+    }
+    &-table {
+      width: 100%;
+      border-collapse: collapse;
+      tr {
+        height: 56px;
+        &:not(:last-child) {
+          border-bottom: 2px solid var(--table-line);
+        }
+      }
+    }
+    &-text {
+      &-wrapper {
+        max-width: 704px;
+        margin: 0 0 0 auto;
+      }
+
+      &-title {
+        margin-bottom: 60px;
+        p {
+          max-width: 680px;
+
+          color: var(--heading-color);
+          font-family: var(--heading-font);
+          font-size: 36px;
+          text-transform: uppercase;
+          font-weight: 400;
+          line-height: 1.35;
+        }
+        span {
+          font-weight: 700;
+          letter-spacing: 0.4px;
+          color: var(--secondary-color);
+        }
+      }
+      &-label {
+        font-family: var(--secondary-font);
+        font-weight: 400;
+        width: 306px;
+        opacity: 0.7;
+        font-size: 20px;
+        border-right: 2px solid var(--table-line);
+      }
+      &-play__info {
+        font-family: var(--secondary-font);
+        width: 398px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.2;
+        padding-left: 16px;
+      }
+      &-old {
+        position: relative;
+        margin-right: 13px;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 81px;
+          border: 2px solid var(--secondary-color);
+          left: 0;
+          right: 0;
+          top: 50%;
+        }
+      }
+    }
+  }
+  &__footer {
+    margin-top: 48px;
+    font-family: var(--secondary-color);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+    color: var(--tertiary-color);
+  }
+}

@@ -87,6 +87,10 @@
         font-weight: 500;
         line-height: 1.2;
       }
+      &.card__extra {
+        display: grid;
+        grid-template-columns: 37px 1fr;
+      }
     }
     &-image {
       position: absolute;

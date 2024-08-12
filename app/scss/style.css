@@ -398,4 +398,122 @@ p {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+
+.members {
+  padding: 100px 0 68px;
+}
+.members__wrapper {
+  position: relative;
+}
+.members__title-wrapper {
+  max-width: 806px;
+}
+.members__title {
+  font-family: var(--heading-font);
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.members__main {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 60px;
+}
+.members__main-image img {
+  display: block;
+  margin: 0 auto;
+}
+.members__main-card-person {
+  margin-top: 28px;
+  display: block;
+  color: var(--heading-color);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.26;
+  text-align: center;
+}
+.members__main-card-subtitle {
+  display: block;
+  font-family: var(--secondary-font);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  color: var(--heading-color);
+  text-align: center;
+  margin-top: 6px;
+  opacity: 0.6;
+}
+.members__main-card-link {
+  margin: 18px auto 0 auto;
+  width: 114px;
+  height: 35px;
+  color: var(--tertiary-color);
+  border: 1px solid var(--tertiary-color);
+  border-radius: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+}
+.members__main-card-link:hover {
+  color: var(--white);
+  background-color: var(--tertiary-color);
+  transition: 0.2s;
+}
+.members__controls {
+  position: absolute;
+  top: 9px;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.members__controls button {
+  background: inherit;
+  width: 44px;
+  height: 44px;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.members__controls button:hover svg circle {
+  fill: #fbce51;
+  transition: 0.5s;
+}
+.members__controls-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  gap: 5px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--heading-color);
+}
+.members__controls-numbers :nth-child(2) {
+  opacity: 0.6;
+}
+.members__controls-numbers :nth-child(3) {
+  opacity: 0.6;
+}
+
+.footer {
+  padding: 40px 0 72px 0;
+  background: var(--footer-bg);
+}
+.footer p {
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  opacity: 0.6;
 }/*# sourceMappingURL=style.css.map */

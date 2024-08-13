@@ -1,5 +1,8 @@
 .support {
   padding: 80px 0 100px;
+  @media screen and (max-width: 1200px) {
+    padding: 40px 0 100px;
+  }
   &__wrapper {
     display: grid;
     gap: 64px;
@@ -9,9 +12,20 @@
     align-items: center;
     min-height: 250px;
     justify-content: space-between;
+    @media screen and (max-width: 1200px) {
+      min-height: auto;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      gap: 40px;
+    }
+
     &-top-image {
       //Возможно через relative делать
       margin-left: 64px;
+      @media screen and (max-width: 1200px) {
+        margin: 0;
+      }
     }
 
     &-top-title {
@@ -27,18 +41,35 @@
         line-height: 1.35;
         letter-spacing: 0px;
       }
+      p {
+        @media screen and (max-width: 1200px) {
+          font-size: clamp(28px, 2.6vw, 36px);
+        }
+      }
       span {
         font-weight: 700;
         color: var(--secondary-color);
       }
     }
   }
+
   &__main {
     position: relative;
     &-image-wrapper {
       position: absolute;
       top: -26px;
       left: -26px;
+      @media screen and (max-width: 1366px) {
+        width: 38.8vw;
+      }
+      @media (max-width: 1200px) {
+        position: relative;
+        margin: 0 auto;
+        max-width: 530px;
+        width: 100%;
+        top: unset;
+        left: unset;
+      }
     }
     &-table {
       width: 100%;
@@ -55,19 +86,26 @@
       &-wrapper {
         max-width: 704px;
         margin: 0 0 0 auto;
+        @media screen and (max-width: 1200px) {
+          max-width: 100%;
+        }
       }
 
       &-title {
         margin-bottom: 60px;
         p {
           max-width: 680px;
-
           color: var(--heading-color);
           font-family: var(--heading-font);
           font-size: 36px;
           text-transform: uppercase;
           font-weight: 400;
           line-height: 1.35;
+          @media (max-width: 1200px) {
+            font-size: clamp(30px, 2.64vw, 36px);
+            min-width: none;
+            text-align: center;
+          }
         }
         span {
           font-weight: 700;
@@ -82,6 +120,11 @@
         opacity: 0.7;
         font-size: 20px;
         border-right: 2px solid var(--table-line);
+        @media screen and (max-width: 1200px) {
+          width: 100%;
+          border-right: none;
+          font-size: 18px;
+        }
       }
       &-play__info {
         font-family: var(--secondary-font);
@@ -90,6 +133,11 @@
         font-size: 20px;
         line-height: 1.2;
         padding-left: 16px;
+        @media screen and (max-width: 1200px) {
+          // width: 100%;
+          font-size: 18px;
+          padding: 0;
+        }
       }
       &-old {
         position: relative;
@@ -107,8 +155,8 @@
     }
   }
   &__footer {
-    margin-top: 20px;
-    font-family: var(--secondary-color);
+    margin-top: 18px;
+    font-family: var(--secondary-font);
     font-size: 20px;
     font-weight: 400;
     line-height: 1.2;

@@ -721,15 +721,46 @@ img {
   line-height: 1.2;
   text-transform: uppercase;
 }
+@media (max-width: 1200px) {
+  .members__title {
+    font-size: clamp(36px, 4.5vw, 54px);
+  }
+}
+@media (max-width: 375px) {
+  .members__title {
+    font-size: clamp(28px, 9.6vw, 36px);
+    line-height: 1.14;
+  }
+}
 .members__main {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 60px;
 }
+@media screen and (max-width: 1200px) {
+  .members__main {
+    display: block;
+  }
+}
 .members__main-image img {
   display: block;
   margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .members__main-image img {
+    width: unset;
+    max-width: 320px;
+    height: auto;
+  }
+}
+@media (max-width: 375px) {
+  .members__main-image img {
+    max-width: unset;
+    height: unset;
+    width: 244px;
+    height: 244px;
+  }
 }
 .members__main-card-person {
   margin-top: 28px;
@@ -782,6 +813,11 @@ img {
   justify-content: space-between;
   align-items: center;
   gap: 15px;
+}
+@media screen and (max-width: 1200px) {
+  .members__controls {
+    position: relative;
+  }
 }
 .members__controls button {
   background: inherit;

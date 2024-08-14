@@ -12,17 +12,37 @@
     font-weight: 400;
     line-height: 1.2;
     text-transform: uppercase;
+    @media (max-width: 1200px) {
+      font-size: clamp(36px, 4.5vw, 54px);
+    }
+    @media (max-width: 375px) {
+      font-size: clamp(28px, 9.6vw, 36px);
+      line-height: 1.14;
+    }
   }
   &__main {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 60px;
-    //not good
+    @media screen and (max-width: 1200px) {
+      display: block;
+    }
     &-image {
       img {
         display: block;
         margin: 0 auto;
+        @media (max-width: 1200px) {
+          width: unset;
+          max-width: 320px;
+          height: auto;
+        }
+        @media (max-width: 375px) {
+          max-width: unset;
+          height: unset;
+          width: 244px;
+          height: 244px;
+        }
       }
     }
     &-card {
@@ -79,6 +99,9 @@
     justify-content: space-between;
     align-items: center;
     gap: 15px;
+    @media screen and (max-width: 1200px) {
+      position: relative;
+    }
 
     button {
       background: inherit;

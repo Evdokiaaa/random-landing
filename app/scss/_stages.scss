@@ -1,5 +1,8 @@
 .stages {
   padding: 100px 0 100px;
+  @media screen and (max-width: 375px) {
+    padding: 50px 0 50px;
+  }
 
   &__header {
     max-width: 806px;
@@ -16,8 +19,12 @@
       letter-spacing: 0px;
       text-align: left;
       text-transform: uppercase;
-      @media (max-width: 1200px) {
+      @media screen and (max-width: 1200px) {
         font-size: clamp(36px, 4.5vw, 54px);
+      }
+      @media screen and (max-width: 375px) {
+        font-size: clamp(28px, 9.6vw, 36px);
+        line-height: 1.1;
       }
     }
     p {
@@ -35,6 +42,9 @@
         top: unset;
         left: unset;
       }
+      @media screen and (max-width: 375px) {
+        font-size: 18px;
+      }
     }
   }
   &__content {
@@ -48,6 +58,11 @@
       grid-template-columns: unset;
       margin: 180px 20px 0px 20px;
     }
+    @media screen and (max-width: 375px) {
+      margin-top: 147px;
+      margin-right: 0px;
+      margin-left: 0px;
+    }
     &-1 {
       grid-area: 1 / 1 / 2 / 3;
       display: grid;
@@ -60,16 +75,19 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 300;
+        height: 300px;
+      }
+      @media screen and (max-width: 375px) {
+        height: 300px;
       }
       div:nth-child(1) {
-        @media (max-width: 1200px) {
+        @media screen and (max-width: 1200px) {
           padding-bottom: 0;
           background-image: none;
         }
       }
       div:nth-child(2) {
-        @media (max-width: 1200px) {
+        @media screen and (max-width: 1200px) {
           padding-top: 0;
           background-image: none;
         }
@@ -100,13 +118,13 @@
         gap: 28px;
       }
       div:nth-child(1) {
-        @media (max-width: 1200px) {
+        @media screen and (max-width: 1200px) {
           padding-bottom: 0;
           background-image: none;
         }
       }
       div:nth-child(2) {
-        @media (max-width: 1200px) {
+        @media screen and (max-width: 1200px) {
           padding-top: 0;
           background-image: none;
         }
@@ -135,8 +153,6 @@
           max-width: unset;
         }
       }
-
-      // margin-left: 5px;
     }
 
     & .card {
@@ -149,7 +165,7 @@
       background-position: center;
       gap: 0 16px;
       font-family: var(--secondary-font);
-      @media (max-width: 1200px) {
+      @media screen and (max-width: 1200px) {
         padding: 62px 20px 33px 20px;
       }
       div {
@@ -168,8 +184,11 @@
         font-size: 20px;
         font-weight: 500;
         line-height: 1.2;
-        @media (max-width: 1200px) {
+        @media screen and (max-width: 1200px) {
           font-size: clamp(17px, 2.33vw, 28px);
+        }
+        @media screen and (max-width: 375px) {
+          font-size: clamp(16px, 4.8vw, 18px);
         }
       }
       &.card__extra {
@@ -182,12 +201,18 @@
       bottom: 0;
       right: -64px;
       user-select: none;
-      @media (max-width: 1200px) {
+      @media screen and (max-width: 1200px) {
         width: clamp(310px, 29.36vw, 401px);
         top: -125px;
         bottom: unset;
         right: unset;
         left: 10px;
+      }
+      @media screen and (max-width: 375px) {
+        max-width: 335px;
+        width: 100%;
+        top: -130px;
+        left: 12px;
       }
     }
   }

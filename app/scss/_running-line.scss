@@ -3,6 +3,9 @@
   color: var(--white);
   padding: 18px 0;
   overflow: hidden;
+  @media screen and (max-width: 375px) {
+    padding: 10px 0;
+  }
   &-container {
     max-width: 2335px;
     margin: 0 auto;
@@ -27,6 +30,9 @@
         top: 50%;
         transform: translateY(-50%);
         right: -18px;
+      }
+      @media screen and (max-width: 375px) {
+        font-size: 16px;
       }
     }
   }

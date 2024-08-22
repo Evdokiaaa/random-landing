@@ -52,11 +52,11 @@ img {
   margin: 0 auto;
   padding: 0 var(--padding);
 
-  @media (max-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     --padding: 8vw;
   }
 
-  @media (max-width: 375px) {
+  @media screen and (max-width: 375px) {
     --padding: 20px;
   }
 }

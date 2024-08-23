@@ -1,3 +1,5 @@
+import "../scss/style.scss";
+
 const stageCards = document.querySelectorAll(".stages__item");
 const stageLeftBtn = document.querySelector(".stages__left-btn");
 const stageRightBtn = document.querySelector(".stages__right-btn");

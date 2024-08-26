@@ -2,7 +2,7 @@ import "../scss/style.scss";
 
 const stageCards = document.querySelectorAll(".stages__item");
 const stageLeftBtn = document.querySelector(".stages__left-btn");
-// const stageRightBtn = document.querySelector(".stages__right-btn");
+const stageRightBtn = document.querySelector(".stages__right-btn");
 const stageDots = document.querySelectorAll(".stages__dots svg");
 
 let currentState = 0;
@@ -17,20 +17,20 @@ function activateStage(i) {
   stageCards[i].classList.add("stages__item-active");
   stageDots[i].classList.add("stages__dots-active");
   stageLeftBtn.disabled = i === 0;
-  // stageRightBtn.disabled = i === 4;
+  stageRightBtn.disabled = i === 4;
 }
 stageLeftBtn.addEventListener("click", () => {
   currentState--;
   reset();
   activateStage(currentState);
 });
-// stageRightBtn.addEventListener("click", () => {
-//   currentState++;
-//   reset();
-//   activateStage(currentState);
-// });
+stageRightBtn.addEventListener("click", () => {
+  currentState++;
+  reset();
+  activateStage(currentState);
+});
 const members = document.querySelectorAll(".members__main-card");
-// const memberRightBtn = document.querySelector(".members__right-btn");
+const memberRightBtn = document.querySelector(".members__right-btn");
 const memberLeftBtn = document.querySelector(".members__left-btn");
 const membersCurrentCount = document.querySelector(".members__current"); //Счетчик слайдов
 
@@ -50,15 +50,15 @@ function updateSlide() {
 function updateCounter() {
   membersCurrentCount.textContent = currentMember + 1;
 }
-// memberRightBtn.addEventListener("click", () => {
-//   if (currentMember + slidesToShow < totalMembers) {
-//     currentMember += slidesToShow;
-//   } else {
-//     currentMember = 0; // Возврат к первому
-//   }
-//   updateCounter();
-//   updateSlide();
-// });
+memberRightBtn.addEventListener("click", () => {
+  if (currentMember + slidesToShow < totalMembers) {
+    currentMember += slidesToShow;
+  } else {
+    currentMember = 0; // Возврат к первому
+  }
+  updateCounter();
+  updateSlide();
+});
 memberLeftBtn.addEventListener("click", () => {
   if (currentMember - slidesToShow >= 0) {
     currentMember -= slidesToShow;
@@ -69,10 +69,10 @@ memberLeftBtn.addEventListener("click", () => {
   updateSlide();
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   updateSlide();
-//   updateCounter();
-// });
+document.addEventListener("DOMContentLoaded", () => {
+  updateSlide();
+  updateCounter();
+});
 window.addEventListener("resize", () => {
   slidesToShow = window.innerWidth <= 1200 ? 1 : 3;
   counter = 0;

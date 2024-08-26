@@ -821,8 +821,8 @@ img {
   bottom: 0;
   right: -64px;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 @media screen and (max-width: 1200px) {
   .stages__content-image {
@@ -1088,4 +1088,4 @@ img {
   font-weight: 400;
   line-height: 120%;
   opacity: 0.6;
-}/*# sourceMappingURL=style.css.map */
+}

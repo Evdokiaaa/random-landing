@@ -28,7 +28,6 @@
     }
 
     &-top-image {
-      //Возможно через relative делать
       margin-left: 64px;
       @media screen and (max-width: 1200px) {
         margin: 0;
@@ -41,7 +40,6 @@
 
     &-top-title {
       max-width: 764px;
-
       p,
       h2 {
         color: var(--heading-color);
@@ -55,7 +53,7 @@
       }
       p {
         @media screen and (max-width: 1200px) {
-          font-size: clamp(28px, 2.6vw, 36px);
+          font-size: clamp(26px, 2.6vw, 36px);
         }
         @media screen and (max-width: 375px) {
           font-size: 7.47vw;
@@ -189,7 +187,6 @@
         line-height: 1.2;
         padding-left: 16px;
         @media screen and (max-width: 1200px) {
-          // width: 100%;
           font-size: 18px;
           padding: 0;
         }

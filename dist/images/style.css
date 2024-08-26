@@ -150,6 +150,7 @@ img {
     display: block;
     text-align: left;
     height: 69px;
+    font-size: 4.8vw;
   }
 }
 .header__banner-buttons {
@@ -395,7 +396,7 @@ img {
 }
 @media screen and (max-width: 1200px) {
   .support__header-top-title p {
-    font-size: clamp(28px, 2.6vw, 36px);
+    font-size: clamp(26px, 2.6vw, 36px);
   }
 }
 @media screen and (max-width: 375px) {
@@ -588,7 +589,7 @@ img {
 }
 @media screen and (max-width: 375px) {
   .stages {
-    padding: 50px 0 50px;
+    padding: 60px 0 60px 0;
   }
 }
 .stages__header {
